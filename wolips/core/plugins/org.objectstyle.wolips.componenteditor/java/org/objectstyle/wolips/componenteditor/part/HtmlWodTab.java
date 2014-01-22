@@ -201,9 +201,9 @@ public class HtmlWodTab extends ComponentEditorTab {
 				this.nonEmptyWodWarning.moveAbove(this._wodContainer.getChildren()[0]);
 
 				// MS: If the wod shrinks, force focus to the template
-				if (!isHtmlActive()) {
+/*				if (!isHtmlActive()) {
 					_templateContainer.forceFocus();
-				}
+				}*/
 			}
 		} else if (this.nonEmptyWodWarning != null) {
 			this.nonEmptyWodWarning.dispose();

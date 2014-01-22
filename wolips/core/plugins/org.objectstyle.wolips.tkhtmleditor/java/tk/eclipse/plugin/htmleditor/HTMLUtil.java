@@ -153,17 +153,9 @@ public class HTMLUtil {
 	/**
 	 * Replace comments of HTML/JSP/XML with whitespaces.
 	 * 
-	 * <ul>
-	 *   <li>replace &lt;!-- ... --&gt; to the whitespaces</li>
-	 *   <li>replace &lt;%-- ... --%&gt; to the whitespaces</li>
-	 * </ul>
-	 * 
+	 *
 	 * @param source source code of the HTML/JSP/XML
 	 * @param contentsOnly
-	 * <ul>
-	 *   <li>true - &lt;!--、--&gt; and &lt;%--、--%&gt; are not replaced.<li>
-	 *   <li>false - &lt;!--、--&gt; and &lt;%--、--%&gt; are also replaced.<li>
-	 * </ul>
 	 * @return processed source code
 	 */
 	public static String comment2space(String source,boolean contentsOnly){
@@ -177,10 +169,6 @@ public class HTMLUtil {
 	 * 
 	 * @param source source code of the JSP
 	 * @param contentsOnly 
-	 * <ul>
-	 *   <li>true - &lt;%、%&gt; are not replaced.</li>
-	 *   <li>false - &lt;%、%&gt; are also replaced.</li>
-	 * </ul>
 	 * @return processed source code
 	 */
 	public static String jspComment2space(String source,boolean contentsOnly){
@@ -218,10 +206,6 @@ public class HTMLUtil {
 	 * 
 	 * @param source source code of the JSP
 	 * @param contentsOnly
-	 * <ul>
-	 *   <li>true - &lt;%、%&gt; are not replaced.
-	 *   <li>false - &lt;%、%&gt; are also replaced.
-	 * </ul>
 	 * @return processed source code
 	 */
 	public static String scriptlet2space(String source,boolean contentsOnly){

@@ -57,6 +57,7 @@ package org.objectstyle.woproject.ant;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.List;
@@ -123,7 +124,7 @@ public class FrameworkSet extends FileSet {
   @SuppressWarnings("unchecked")
   public ExternalFrameworkModel getFrameworkModel() {
     if (this.frameworkModel == null) {
-      this.frameworkModel = new ExternalFrameworkModel(getProject().getProperties());
+      this.frameworkModel = new ExternalFrameworkModel(new HashMap<Object,Object>(getProject().getProperties()));
     }
     return this.frameworkModel;
   }

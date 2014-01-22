@@ -57,6 +57,7 @@ package org.objectstyle.woproject.ant;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.tools.ant.BuildException;
@@ -553,7 +554,7 @@ public class WOApplication extends WOTask {
   public WOEnvironment getWOEnvironment() {
     if (woEnvironment != null)
       return woEnvironment;
-    woEnvironment = new WOEnvironment(this.getProject().getProperties());
+    woEnvironment = new WOEnvironment(new HashMap<Object,Object>(this.getProject().getProperties()));
     if (!woEnvironment.variablesConfigured())
       this.getProject().fireBuildFinished(new WOBuildPropertiesNotFoundException());
     return woEnvironment;

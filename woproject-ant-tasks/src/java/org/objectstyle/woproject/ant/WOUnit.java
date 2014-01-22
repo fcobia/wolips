@@ -1,5 +1,6 @@
 package org.objectstyle.woproject.ant;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class WOUnit extends JUnitTask {
 
   @Override
   public void execute() throws BuildException {
-    getCommandline().createClasspath(getProject()).createPath().add(FrameworkSet.jarsPathForFrameworkSets(getProject(), frameworkSets, new WOEnvironment(getProject().getProperties()).getWOVariables()));
+    getCommandline().createClasspath(getProject()).createPath().add(FrameworkSet.jarsPathForFrameworkSets(getProject(), frameworkSets, new WOEnvironment(new HashMap<Object, Object>(getProject().getProperties())).getWOVariables()));
     super.execute();
   }
 }

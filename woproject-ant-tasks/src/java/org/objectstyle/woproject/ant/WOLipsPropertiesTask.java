@@ -1,6 +1,7 @@
 package org.objectstyle.woproject.ant;
 
 import java.io.File;
+import java.util.HashMap;
 
 import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.Task;
@@ -11,7 +12,7 @@ public class WOLipsPropertiesTask extends Task {
 	@SuppressWarnings("unchecked")
 	public void execute() throws BuildException {
 		if (getProject().getProperty("wolips.properties") == null) {
-			WOEnvironment environment = new WOEnvironment(getProject().getProperties());
+			WOEnvironment environment = new WOEnvironment(new HashMap<Object, Object>(getProject().getProperties()));
 			File wolipsPropertiesFile = environment.getWOVariables().getWOLipsPropertiesFile();
 			if (wolipsPropertiesFile != null) {
 				getProject().setProperty("wolips.properties", wolipsPropertiesFile.getAbsolutePath());

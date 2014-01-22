@@ -16,29 +16,23 @@ public class FuzzyXMLErrorEvent {
 		this.node    = node;
 	}
 	
-	/**
-	 * @return length を戻します。
-	 */
 	public int getLength() {
 		return length;
 	}
 	
 	/**
-	 * @return message を戻します。
 	 */
 	public String getMessage() {
 		return message;
 	}
 	
 	/**
-	 * @return offset を戻します。
 	 */
 	public int getOffset() {
 		return offset;
 	}
 	
 	/**
-	 * @return node を戻します。
 	 */
 	public FuzzyXMLNode getNode() {
 		return node;

@@ -1,7 +1,6 @@
 package jp.aonir.fuzzyxml.event;
 
 /**
- * DOMツリーの変更時に通知されるイベント。
  */
 public class FuzzyXMLModifyEvent {
     

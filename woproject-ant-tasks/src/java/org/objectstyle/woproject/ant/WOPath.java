@@ -55,6 +55,7 @@
  */
 package org.objectstyle.woproject.ant;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -107,7 +108,7 @@ public class WOPath extends Path {
     // seems to be called before it's used, so I think this will do it
     @Override
     protected ResourceCollection assertFilesystemOnly(ResourceCollection rc) {
-      add(FrameworkSet.jarsPathForFrameworkSets(getProject(), _frameworkSets, new WOEnvironment(getProject().getProperties()).getWOVariables()));
+      add(FrameworkSet.jarsPathForFrameworkSets(getProject(), _frameworkSets, new WOEnvironment(new HashMap<Object, Object>(getProject().getProperties())).getWOVariables()));
       return super.assertFilesystemOnly(rc);
     }
     

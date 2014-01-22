@@ -57,6 +57,7 @@ package org.objectstyle.woenvironment.frameworks;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;

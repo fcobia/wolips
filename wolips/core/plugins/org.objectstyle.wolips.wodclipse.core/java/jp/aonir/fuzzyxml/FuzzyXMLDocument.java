@@ -23,16 +23,10 @@ public interface FuzzyXMLDocument {
 	public FuzzyXMLElement getElementByOffset(int offset);
 	
 	/**
-	 * このドキュメントの更新通知を受け取るFuzzyXMLModifyListenerを登録します。
-	 * 
-	 * @param listener 登録するリスナ
 	 */
 	public void addModifyListener(FuzzyXMLModifyListener listener);
 	
 	/**
-	 * このドキュメントからFuzzyXMLModifyListenerを削除します。
-	 * 
-	 * @param listener 削除するリスナ
 	 */
 	public void removeModifyListener(FuzzyXMLModifyListener listener);
 	

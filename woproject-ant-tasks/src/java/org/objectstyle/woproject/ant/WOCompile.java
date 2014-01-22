@@ -55,6 +55,7 @@
  */
 package org.objectstyle.woproject.ant;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -86,7 +87,7 @@ public class WOCompile extends Javac {
 
   @Override
   public void execute() throws BuildException {
-    setClasspath(FrameworkSet.jarsPathForFrameworkSets(getProject(), frameworkSets, new WOEnvironment(getProject().getProperties()).getWOVariables()));
+    setClasspath(FrameworkSet.jarsPathForFrameworkSets(getProject(), frameworkSets, new WOEnvironment(new HashMap<Object, Object>(getProject().getProperties())).getWOVariables()));
     if (dumpClasspath != null) {
       getProject().setProperty(dumpClasspath, getClasspath().toString());
     }

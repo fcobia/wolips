@@ -65,14 +65,12 @@ public abstract class AbstractFuzzyXMLNode implements FuzzyXMLNode {
   }
 
   /**
-   * �c���[�̍X�V�C�x���g�𔭉΂��܂��B
-   * 
+   *
    * @param newText
    * @param offset
    * @param length
    */
   protected void fireModifyEvent(String newText, int offset, int length) {
-    // �܂��m�[�h���c���[�ɒǉ�����Ă��Ȃ��ꍇ�͂Ȃɂ����Ȃ�
     FuzzyXMLDocumentImpl doc = getDocument();
     if (doc == null) {
       return;
@@ -81,14 +79,12 @@ public abstract class AbstractFuzzyXMLNode implements FuzzyXMLNode {
   }
 
   /**
-   * �m�[�h�̈ʒu�����X�V���܂��B�c���[�̕ύX�O�ɌĂяo���܂��B
-   * 
+   *
    * @param parent
    * @param offset
    * @param append
    */
   protected void appendOffset(FuzzyXMLElement parent, int offset, int append) {
-    // �܂��m�[�h���c���[�ɒǉ�����Ă��Ȃ��ꍇ�͂Ȃɂ����Ȃ�
     FuzzyXMLDocumentImpl doc = getDocument();
     if (doc == null) {
       return;
